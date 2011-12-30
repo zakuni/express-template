@@ -2,8 +2,12 @@
 html
   head
     meta(charset='UTF-8')
-    meta(name='description', content='')
-    meta(name='keywords', content='')
+    - var description = description;
+    - var keywords = keywords;
+    - if (description)
+      meta(name='description', content=description)
+    - if (keywords)
+      meta(name='keywords', content=keywords)
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body!= body

@@ -38,7 +38,8 @@ app.post('/', function(req, res){
 
 var japanese = encodeURI('/日本語');
 app.get(japanese, function(req, res){
-  res.render('index', { title: 'Express テンプレート' })
+  res.render('index', { title: 'Express テンプレート',
+  			description: 'Expressのテンプレート'})
 });
 
 app.listen(3000);
