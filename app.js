@@ -13,7 +13,6 @@ var app = module.exports = express.createServer();
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.set('view options', { pretty: true});
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
@@ -31,10 +30,6 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-
-app.post('/', function(req, res){
-  res.send('message: ' + req.body.fomfom);
-})
 
 var japanese = encodeURI('/日本語');
 app.get(japanese, function(req, res){
