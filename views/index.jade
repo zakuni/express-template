@@ -1,8 +1,9 @@
 h1= title
-p #{title} with Jade + Mongoose
+h3 #{title} with Jade + Mongoose
+p
+  a(href='/books') books 
+  form(method='post', action='/')
+    input(type='text', name='fomfom')
+p
+  a(href='/日本語') 日本語URL
 
-a(href='/日本語') 日本語URL
-br
-br
-form(method='post', action='/')
-  input(type='text', name='fomfom')
